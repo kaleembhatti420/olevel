@@ -1,0 +1,414 @@
+/* Common styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--normal-blue);
+}
+
+
+:root {
+    /* Text */
+    --black: black;
+    --light-text: #fff;
+    --dark-text: black;
+
+    /* Backgrounds */
+    --dark-bg: var(--black);
+    --light-black: rgb(88, 88, 88);
+
+    /* Blues */
+    --normal-blue: #002e51;
+    --light-blue: #2e314f;
+    --dark-blue: #001e4a;
+}
+
+/* //////////////////////////// */
+
+/* Nav bar */
+.nav-bar {
+    max-width: 100vw;
+    height: 80px;
+    /* background: black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Look */
+    /* From the convers to make it look good */
+    margin: 0 30px;
+    color: var(--light-text);
+    margin-bottom: 50px;
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--dark-blue), white);
+}
+
+.logo {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+/* //////////////////////////// */
+/* Links container */
+.links-container {
+    max-width: 100vw;
+    min-height: 80px;
+    /* background: steelblue; */
+    margin: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 35px;
+    border-bottom: 2px solid white ;
+    padding-bottom: 80px;
+}
+
+.links-container a {
+    width: 120px;
+    text-align: center;
+    /* background: red; */
+    text-decoration: none;
+    color: var(--light-text);
+    padding: 10px 0;
+    border-top: 2px solid white;
+    transition: all 0.5s;
+    padding-top: 20px;
+
+}
+
+.links-container a:hover {
+    /* background: var(--dark-bg); */
+    /* color: var(--light-text); */
+    border-top: 2px solid var(--normal-blue);
+    transform: translateY(10px);
+    border-radius: 10px;
+
+}
+
+
+
+/* //////////////////////////// */
+/* Hero section */
+.hero-section {
+    margin-top: 100px;
+    aspect-ratio: 1600/600;
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.layer1 {
+    background: url("./images/background-1.svg");
+    animation: heroAni 5s infinite;
+}
+
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(0%, -50%);
+    width: 50%;
+    height: 90%;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    color: var(--light-text);
+}
+
+.text-box h1 {
+    font-size: 3rem;
+}
+
+.text-box h2 {
+    margin: 20px 0;
+}
+
+.text-box button {
+    margin-top: 50px;
+    width: 400px;
+    padding: 9px 0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.text-box button a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: all 0.5s;
+    font-weight: 400;
+}
+
+.text-box button:hover {
+    background-color: var(--normal-blue);
+    color: white;
+}
+
+.text-box button:hover a {
+    color: white;
+
+}
+
+
+/* //////////////////////////// */
+/* Info container */
+.info-container {
+    max-width: 100vw;
+    min-height: 100px;
+    background-color: white;
+    padding-top: 150px;
+    position: relative;
+    /* background-color: blue; */
+    padding-bottom: 200px;
+}
+
+.info-content {
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.info-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
+.info-content p {
+    margin-top: 60px;
+    font-size: 1.1rem;
+}
+
+.info-image-container {
+    position: absolute;
+    top: 150px;
+    right: 10%;
+    width: 350px;
+    height: 250px;
+    background: url("./images/transition-small.jpg");
+
+    /* Remove with JS */
+    filter: blur(10px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border-radius: 50%; */
+}
+
+.overlay-image-text {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* background: rgba(0, 0, 0, 0.6); */
+    background: var(--normal-blue);
+    color: white; 
+    transition: all 0.5s;
+}
+
+.overlay-image-text:hover {
+    opacity: 0.8;
+}
+
+
+/* //////////////////////////// */
+/* Items container */
+.items-container {
+    padding-top: 100px;
+    max-width: 100vw;
+    min-height: 600px;
+    background: white;
+    padding-bottom: 50px;
+}
+
+.item {
+    width: 300px;
+    height: 300px;
+}
+
+.item-hidding {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    row-gap: 30px;
+    column-gap: 0px;
+}
+
+
+
+
+
+/* //////////////////////////////// */
+/* Change this please */
+
+.item-1 {
+    background: url("./images/biology-small.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-2 {
+    background: url("./images/chemistry-small.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-3 {
+    background: url("./images/physics-small.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-4 {
+    background: url("./images/islamiyat-small.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-5 {
+    background: url("./images/urdu-small.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.item-6 {
+    background: url("./images/english-small.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.item-7 {
+    background: url("./images/computer-science-small.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.item-8 {
+    background: url("./images/history-small.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* /////////////////////////////// */
+.item a {
+    text-decoration: none;
+}
+
+.item-overlay {
+    width: 100%;
+    height: 100%;
+    background: var(--normal-blue);
+    color: white;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: all 0.5s;
+}
+
+
+.item-overlay:hover {
+    opacity: 0.8;
+}
+
+
+/* //////////////////////////////// */
+.more-btn {
+    max-width: 100vw;
+    height: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.more-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+.more-btn a button {
+    width: 300px;
+    padding: 8px 0;
+    border: 2px solid var(--normal-blue);
+    border-radius: 5px;
+    background: white;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.more-btn a button:hover {
+    background: var(--normal-blue);
+    color: white;
+}
+
+
+
+
+
+/* //////////////////////////// */
+/* Animations */
+
+/* Animation of background hero */
+@keyframes heroAni {
+    0% {
+        background: url("./images/background-1.svg");
+    }
+
+    33% {
+        background: url("./images/background-2.svg");
+    }
+
+    66% {
+        background: url("./images/background-3.svg");
+    }
+
+    100% {
+        background: url("./images/background-1.svg");
+    }
+}
+
